@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.f359829a.chunk.css",
-    "main.js": "/static/js/main.884dd546.chunk.js",
-    "main.js.map": "/static/js/main.884dd546.chunk.js.map",
+    "main.js": "/static/js/main.058fe704.chunk.js",
+    "main.js.map": "/static/js/main.058fe704.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.14a5859b.js",
     "runtime-main.js.map": "/static/js/runtime-main.14a5859b.js.map",
     "static/js/2.a9358b0d.chunk.js": "/static/js/2.a9358b0d.chunk.js",
@@ -11,12 +11,12 @@
     "static/css/main.f359829a.chunk.css.map": "/static/css/main.f359829a.chunk.css.map",
     "static/js/2.a9358b0d.chunk.js.LICENSE.txt": "/static/js/2.a9358b0d.chunk.js.LICENSE.txt",
     "static/media/aang.8874cc35.png": "/static/media/aang.8874cc35.png",
-    "static/media/max-zhang-portfolio-cv.93b2a362.pdf": "/static/media/max-zhang-portfolio-cv.93b2a362.pdf"
+    "static/media/max-zhang-portfolio-cv.39066f04.pdf": "/static/media/max-zhang-portfolio-cv.39066f04.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.14a5859b.js",
     "static/js/2.a9358b0d.chunk.js",
     "static/css/main.f359829a.chunk.css",
-    "static/js/main.884dd546.chunk.js"
+    "static/js/main.058fe704.chunk.js"
   ]
 }
