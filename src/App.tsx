@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ChangeDarkMode } from './functions/ChangeDarkMode';
+import { light_mode, dark_mode } from './styles/colour';
+import Toggler from './components/Toggler';
+
 
 function App() {
+  const [theme, themeToggler] = ChangeDarkMode();
+  const themeMode = theme === 'light' ? light_mode : dark_mode;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React lol
-        </a>
-      </header>
+      <h1>
+        Hello,<br/>
+        I'm Max.
+      </h1>
+      <Toggler /><br/>
     </div>
   );
 }
