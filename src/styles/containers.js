@@ -1,32 +1,36 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Top1 = styled.div`
     padding-top: 1rem;
 `;
 
 const Top3 = styled.div`
-    padding-top: 3rem;
+    padding-top: 2.6rem;
 `;
 
+// in App.tsx
 const SiteContainer = styled.div`
     width: 100wh;
     height: 100vh;
     background-color: ${({ theme }) => theme.background}; 
+    justify-content: center;
 `;
 
+// content + sidenav
 const PageContainer = styled.div`
     width: 70%;
-    height: 100vh;
-    left: 0;
+    padding-top: 9rem;
     display: flex;
-    justify-content: center;
     flex-direction: row;
+    margin: 0% 15%;
+    background-color: re;
 `;
 
+// page content, left majority
 const ContentContainer = styled.div`
-    display: flex;
+    width: 80%;
     flex-direction: row;
-    padding-top: 9rem;
+    background-color: gree;
 `;
 
 const Overlap = styled.div`

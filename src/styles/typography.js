@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom';
 
 const extraLargeText = '48px'
 const largeText = '32px'
-const mediumText = '20px'
-const bodyText = '16px'
-const smallText = '12px'
+const mediumText = '16px'
+const bodyText = '14px'
+const smallText = '10px'
 
 // large heading, e.g. 'Hello, I'm Max.'
 const LargeHeading = styled.p`
@@ -19,7 +20,7 @@ const LargeHeading = styled.p`
 `;
 
 const Heading = styled.p`
-    margin: 32px 0px 6px 0px;
+    margin: 1rem 0rem 1.4rem 0rem;
     font-size: ${mediumText};
     padding-bottom: 6px;
     font-family: "Open Sans", sans-serif;
@@ -30,13 +31,66 @@ const Heading = styled.p`
     color: ${({ theme }) => theme.secondary};
 `;
 
+const HeadingFancy = styled.p`
+    margin: 1rem 0rem 1rem 0rem;
+    font-size: ${bodyText};
+    padding-bottom: 0.4rem;
+    font-family: "Shippori Mincho B1", sans-serif;
+    font-weight: 900;
+    word-wrap: normal;
+    letter-spacing: 0.1rem;
+    line-height: 1rem;
+    color: ${({ theme }) => theme.secondary};
+`;
+
 const Body = styled.p`
     font-size: ${bodyText};
     color: ${({ theme }) => theme.secondary};
 `;
 
+const activeClassName = 'nav-item-active'
+
+const LinkHeading = styled(NavLink).attrs({ activeClassName })`
+    font-size: ${mediumText};
+    font-family: "Open Sans", sans-serif;
+    color: ${({ theme }) => theme.secondary};
+    text-align: right;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1rem;
+    font-weight: 700;
+    &:hover {
+        color: ${({ theme }) => theme.primary};
+    }
+    &.${activeClassName} {
+        color: ${({ theme }) => theme.primary};
+      }
+`;
+
+const LinkHeadingFancy = styled(NavLink).attrs({ activeClassName })`
+    font-size: ${largeText};
+    font-family: "Shippori Mincho B1", sans-serif;
+    color: ${({ theme }) => theme.secondary};
+    text-align: right;
+    letter-spacing: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1rem;
+    font-weight: 900;
+    &:hover {
+        color: ${({ theme }) => theme.tertiary};
+    }
+    &.${activeClassName} {
+        color: ${({ theme }) => theme.tertiary};
+      }
+`;
+
 export const typography = {
     LargeHeading: LargeHeading,
     Heading: Heading,
+    HeadingFancy: HeadingFancy,
     Body: Body,
+    LinkHeading: LinkHeading,
+    LinkHeadingFancy: LinkHeadingFancy,
 };

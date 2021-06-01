@@ -1,8 +1,9 @@
 import { typography, containers } from '../styles';
 import styled from 'styled-components';
+import { SideNav } from '../components/SideNav';
+
 
 const LandingContainer = styled.div`
-
 `;
 
 const BodyContainer = styled.div`
@@ -36,8 +37,8 @@ export const LandingPage = () => {
                         I'm Max.
                     </typography.LargeHeading>
 
-                    <containers.Top3>
-                        <BodyContainer>
+                    <BodyContainer>
+                        <containers.Top3>
                             <typography.Heading>
                                 currently i'm...
                             </typography.Heading>
@@ -50,11 +51,9 @@ export const LandingPage = () => {
                                     <typography.Body>seeking internships for Fall 2021</typography.Body>
                                 </ListItem>
                             </ListContainer>
+                        </containers.Top3>
 
-                        </BodyContainer>
-                    </containers.Top3>
-                    <containers.Top1>
-                        <BodyContainer>
+                        <containers.Top1>
                             <typography.Heading>
                                 before, i was...
                             </typography.Heading>
@@ -70,12 +69,14 @@ export const LandingPage = () => {
                                     <typography.Body>performing Jazz music in and around Montréal & Vancouver</typography.Body>
                                 </ListItem>
                             </ListContainer>
-                            
-                        </BodyContainer>
-                    </containers.Top1>
+                        </containers.Top1>
+                    </BodyContainer>
+
                 </LandingContainer>
             
             </containers.ContentContainer>
+            <SideNav />
+
         </containers.PageContainer>
     )
 }
