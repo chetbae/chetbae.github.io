@@ -1,12 +1,10 @@
 export const light_mode = {
-    text: 'black',
+    primary: 'black',
+    secondary: '#003163',
     background: 'white',
-    shadow: 'grey',
-    misc: 'blue',
 }
 export const dark_mode = {
-    text: 'white',
-    background: 'black',
-    shadow: 'purple',
-    misc: 'green',
+    primary: '#D9D9D9',
+    secondary: '#B3C4FF',
+    background: '#00114B',
 }

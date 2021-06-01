@@ -5,6 +5,7 @@ import history from './history';
 import { LandingPage, AboutPage } from './containers';
 import { ThemeProvider } from 'styled-components';
 import { Toggle } from './components/Toggle';
+import { containers } from './styles';
 
 function App() {
   const [theme, setTheme] = useState(false);
@@ -16,14 +17,16 @@ function App() {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <Router history={history}>
-        <Switch>
-          <Route exact path='/' component={LandingPage} />
-          <Route exact path='/about' component={AboutPage} />
-        </Switch>
-      </Router>
+      <containers.SiteContainer>
+        <Router history={history}>
+          <Switch>
+            <Route exact path='/' component={LandingPage} />
+            <Route path='/about' component={AboutPage} />
+          </Switch>
+        </Router>
 
-      <Toggle {...themeProps} />
+        <Toggle {...themeProps} />
+      </containers.SiteContainer>
     </ThemeProvider>
   );
 }

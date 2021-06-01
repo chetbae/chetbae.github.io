@@ -1,17 +1,42 @@
-/*
+import styled from 'styled-components'
 
-I care about the focus and flow programming adds to my life.
-With the various disciplines I handle, I hope to create tools that inspire and contribute positivity to other lives.
+const extraLargeText = '48px'
+const largeText = '32px'
+const mediumText = '20px'
+const bodyText = '16px'
+const smallText = '12px'
 
-I am currently a college student at McGill University, focusing on a double major in Computer Science and Music Performance.
-Before, I was in highschool, performing internationally with the award-winning Jazz Band at Semiahmoo Secondary in Surrey, BC.
-Since then, I have been doing professional work as a musician in Vancouver and Montreal.
+// large heading, e.g. 'Hello, I'm Max.'
+const LargeHeading = styled.p`
+    margin: 0rem;
+    font-size: ${extraLargeText};
+    padding-bottom: 1rem;
+    font-family: "Shippori Mincho B1", sans-serif;
+    font-weight: 900;
+    word-wrap: normal;
+    text-align: left;
+    color: ${({ theme }) => theme.secondary};
+`;
 
-My foray with code started with an introductory programming class in university; it's been history ever since.
-I'm interested in Software Design, ML, Audio DSP, and overly enthuasiastic about music technology.
+const Heading = styled.p`
+    margin: 32px 0px 6px 0px;
+    font-size: ${mediumText};
+    padding-bottom: 6px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 350;
+    word-wrap: normal;
+    letter-spacing: 0.3rem;
+    line-height: 14px;
+    color: ${({ theme }) => theme.secondary};
+`;
 
-I'd love to hear from you! maxzhangvancouver@gmail.com
+const Body = styled.p`
+    font-size: ${bodyText};
+    color: ${({ theme }) => theme.secondary};
+`;
 
-*/
-import styled from "styled-components"
-import colour from "colour"
+export const typography = {
+    LargeHeading: LargeHeading,
+    Heading: Heading,
+    Body: Body,
+};
