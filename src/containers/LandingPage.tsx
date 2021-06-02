@@ -1,9 +1,11 @@
 import { typography, containers } from '../styles';
 import styled from 'styled-components';
 import { SideNav } from '../components/SideNav';
-
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 
 const LandingContainer = styled.div`
+    transition: all 0.5s ease;
 `;
 
 const BodyContainer = styled.div`
@@ -23,8 +25,10 @@ const ListItem = styled.li`
     }
 `;
 
-
 export const LandingPage = () => {
+    const themeContext = useContext(ThemeContext);
+    const mode = themeContext.id === 'dark';
+
     return(
         <containers.PageContainer>
             <containers.ContentContainer>
@@ -32,26 +36,32 @@ export const LandingPage = () => {
                 <LandingContainer>
 
                     <typography.LargeHeading>
-                        Hello,<br />
+                        { mode ? 'Howdy!' : 'Hello,'}<br />
                     </typography.LargeHeading>
                     <typography.LargeHeading1>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        I'm Max.
+                        I'm Max{mode ? ' 🤠' : ''}.
                     </typography.LargeHeading1>
 
                     <BodyContainer>
                         <containers.Top3>
                             <typography.Heading>
-                                currently i'm...
+                                right now ...
                             </typography.Heading>
 
                             <ListContainer>
                                 <ListItem>
-                                    <typography.Body>studying machine learning at MIT Open Learning Library</typography.Body>
+                                    <typography.Body>studying machine learning at&nbsp;
+                                        <typography.LinkBody 
+                                            href="https://openlearning.mit.edu/courses-programs/open-learning-library" 
+                                            target='_blank' >
+                                            MIT Open Learning Library
+                                        </typography.LinkBody>
+                                    </typography.Body>
                                 </ListItem>
-                                <ListItem>
+                                {/* <ListItem>
                                     <typography.Body>seeking internships for Fall 2021</typography.Body>
-                                </ListItem>
+                                </ListItem> */}
                             </ListContainer>
                         </containers.Top3>
 
@@ -62,13 +72,37 @@ export const LandingPage = () => {
 
                             <ListContainer>
                                 <ListItem>
-                                    <typography.Body>third year @ mcgill: software design, advanced algorithms, linear algebra, etc...</typography.Body>
+                                    <typography.Body>
+                                        3<sup>rd</sup> year at McGill: algorithm design,&nbsp;
+                                        <typography.LinkBody 
+                                            href="https://github.com/chetbae/interactive-menu-display" 
+                                            target='_blank' >
+                                            software design
+                                        </typography.LinkBody>
+                                       , etc.
+                                    </typography.Body>
                                 </ListItem>
                                 <ListItem>
-                                    <typography.Body>making productivity apps for students at McHacks, CodeJam, HacktheNorth++</typography.Body>
+                                    <typography.Body>
+                                        making&nbsp;
+                                        <typography.LinkBody 
+                                            href="https://github.com/chetbae" 
+                                            target='_blank'>
+                                            productivity apps
+                                        </typography.LinkBody>
+                                        &nbsp;for students at McHacks, HacktheNorth++ ...
+                                    </typography.Body>
                                 </ListItem>
                                 <ListItem>
-                                    <typography.Body>performing Jazz music in and around Montréal & Vancouver</typography.Body>
+                                    <typography.Body>
+                                        performing&nbsp; 
+                                        <typography.LinkBody 
+                                            href="https://musicmaxzhang.wixsite.com/maxzhangmusic" 
+                                            target='_blank' >
+                                            JAZZ🎺
+                                        </typography.LinkBody> 
+                                        &nbsp;music in and around Montréal & Vancouver
+                                    </typography.Body>
                                 </ListItem>
                             </ListContainer>
                         </containers.Top1>

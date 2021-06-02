@@ -36,7 +36,7 @@ export const Toggle: React.FC<IMyProps> = (props: IMyProps) => {
 
     return(
         <StyledButton onClick={toggleTheme}>
-            <typography.BodyFancy>{!theme ? 'dark' : 'light'}</typography.BodyFancy>
+            <typography.BodyFancy id="darkMode" >{!theme ? 'dark 🥂' : 'light ☕️'}</typography.BodyFancy>
         </StyledButton>
     )
 }

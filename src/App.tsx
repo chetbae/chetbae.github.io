@@ -7,10 +7,6 @@ import { ThemeProvider } from 'styled-components';
 import { Toggle } from './components/Toggle';
 import { containers } from './styles';
 
-const togglePosition = {
-  right: '15%'
-};
-
 function App() {
   const [theme, setTheme] = useState(false);
   const themeMode = theme ? light_mode : dark_mode; 
