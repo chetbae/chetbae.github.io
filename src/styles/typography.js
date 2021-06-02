@@ -16,6 +16,17 @@ const LargeHeading = styled.p`
     font-weight: 900;
     word-wrap: normal;
     text-align: left;
+    color: ${({ theme }) => theme.primary};
+`;
+
+const LargeHeading1 = styled.p`
+    margin: 0rem;
+    font-size: ${extraLargeText};
+    padding-bottom: 1rem;
+    font-family: "Shippori Mincho B1", sans-serif;
+    font-weight: 900;
+    word-wrap: normal;
+    text-align: left;
     color: ${({ theme }) => theme.secondary};
 `;
 
@@ -28,10 +39,17 @@ const Heading = styled.p`
     word-wrap: normal;
     letter-spacing: 0.3rem;
     line-height: 14px;
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.primary};
 `;
 
-const HeadingFancy = styled.p`
+const Body = styled.p`
+    font-size: ${bodyText};
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    color: ${({ theme }) => theme.primary};
+`;
+
+const BodyFancy = styled.p`
     margin: 1rem 0rem 1rem 0rem;
     font-size: ${bodyText};
     padding-bottom: 0.4rem;
@@ -40,14 +58,8 @@ const HeadingFancy = styled.p`
     word-wrap: normal;
     letter-spacing: 0.1rem;
     line-height: 1rem;
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.primary};
 `;
-
-const Body = styled.p`
-    font-size: ${bodyText};
-    color: ${({ theme }) => theme.secondary};
-`;
-
 const activeClassName = 'nav-item-active'
 
 const LinkHeading = styled(NavLink).attrs({ activeClassName })`
@@ -88,8 +100,9 @@ const LinkHeadingFancy = styled(NavLink).attrs({ activeClassName })`
 
 export const typography = {
     LargeHeading: LargeHeading,
+    LargeHeading1: LargeHeading1,
     Heading: Heading,
-    HeadingFancy: HeadingFancy,
+    BodyFancy: BodyFancy,
     Body: Body,
     LinkHeading: LinkHeading,
     LinkHeadingFancy: LinkHeadingFancy,

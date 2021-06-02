@@ -5,8 +5,6 @@ const LinkContainer = styled.nav`
     width: 20%;
     line-height: 2rem;
     text-align: right;
-
-    background-color: gre;
 `;
 
 export const SideNav = () => {

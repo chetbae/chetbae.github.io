@@ -18,7 +18,7 @@ const ListItem = styled.li`
 
     &::marker{
         content: '●     ';
-        color: ${({ theme }) => theme.secondary};
+        color: ${({ theme }) => theme.primary};
         font-size: 0.8rem;
     }
 `;
@@ -33,9 +33,11 @@ export const LandingPage = () => {
 
                     <typography.LargeHeading>
                         Hello,<br />
+                    </typography.LargeHeading>
+                    <typography.LargeHeading1>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         I'm Max.
-                    </typography.LargeHeading>
+                    </typography.LargeHeading1>
 
                     <BodyContainer>
                         <containers.Top3>

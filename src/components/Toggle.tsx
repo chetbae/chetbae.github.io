@@ -6,12 +6,10 @@ const StyledButton = styled.button`
     background-color: ${({ theme }) => theme.background};
     border: none;
     color: ${({ theme }) => theme.secondary};
-    padding: 0.2rem 0.6rem;
-    margin: 1rem;
     text-align: center;
     text-decoration: none;
     position: fixed;
-    right: 0;
+    right: 1rem;
     top: 0;
 `;
 
@@ -38,7 +36,7 @@ export const Toggle: React.FC<IMyProps> = (props: IMyProps) => {
 
     return(
         <StyledButton onClick={toggleTheme}>
-            <typography.HeadingFancy>{!theme ? 'dark' : 'light'}</typography.HeadingFancy>
+            <typography.BodyFancy>{!theme ? 'dark' : 'light'}</typography.BodyFancy>
         </StyledButton>
     )
 }

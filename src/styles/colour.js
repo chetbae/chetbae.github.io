@@ -1,12 +1,20 @@
+const darkBlue = '#003163';
+const superDarkBlue = '#031d36';
+const lightBlue = '#B3C4FF';
+const cornflowerBlue = '#6495ED';
+const moon = '#eff0cc';
+const white = '#F5F5F5';
+const black = '#000000';
+
 export const light_mode = {
-    primary: 'black',
-    secondary: '#003163',
-    tertiary: '#003163',
-    background: 'white',
+    primary: darkBlue,
+    secondary: darkBlue,
+    tertiary: cornflowerBlue,
+    background: white,
 }
 export const dark_mode = {
-    primary: '#D9D9D9',
-    secondary: '#B3C4FF',
-    tertiary: '#D9D9D9',
-    background: '#031d36',
+    primary: lightBlue,
+    secondary: moon,
+    tertiary: moon,
+    background: superDarkBlue,
 }

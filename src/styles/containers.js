@@ -19,7 +19,7 @@ const SiteContainer = styled.div`
 // content + sidenav
 const PageContainer = styled.div`
     width: 70%;
-    padding-top: 9rem;
+    padding-top: 7rem;
     display: flex;
     flex-direction: row;
     margin: 0% 15%;
