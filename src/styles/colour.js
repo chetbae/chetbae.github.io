@@ -4,7 +4,7 @@ const lightBlue = '#B3C4FF';
 const cornflowerBlue = 'cornflowerblue';
 const moon = '#eff0cc';
 const white = 'aliceblue';
-const black = '#000000';
+// const black = '#000000';
 const pink = 'lightsalmon';
 const coral = 'lightcoral';
 
