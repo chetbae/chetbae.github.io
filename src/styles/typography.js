@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom';
 
-const extraLargeText = '48px'
-const largeText = '32px'
-const mediumText = '16px'
-const bodyText = '14px'
-const smallText = '12px'
+const extraLargeText = '3rem'
+const largeText = '2rem'
+const mediumText = '1rem'
+const bodyText = '0.9rem'
+const smallText = '0.75rem'
 
-// large heading, e.g. 'Hello, I'm Max.'
+// large heading, e.g. 'Hello,'
 const LargeHeading = styled.p`
     margin: 0rem;
     font-size: ${extraLargeText};
@@ -19,6 +19,7 @@ const LargeHeading = styled.p`
     color: ${({ theme }) => theme.primary};
 `;
 
+// large heading, e.g. 'I'm Max'
 const LargeHeading1 = styled.p`
     margin: 0rem;
     font-size: ${extraLargeText};
@@ -30,6 +31,7 @@ const LargeHeading1 = styled.p`
     color: ${({ theme }) => theme.secondary};
 `;
 
+// 'right now...', 'before, i was...'
 const Heading = styled.p`
     margin: 1rem 0rem 1.4rem 0rem;
     font-size: ${smallText};
@@ -42,28 +44,13 @@ const Heading = styled.p`
     color: ${({ theme }) => theme.primary};
 `;
 
+// list items, ...
 const Body = styled.p`
     font-size: ${bodyText};
     font-family: "Open Sans", sans-serif;
     font-weight: 450;
     letter-spacing: 0.11rem;
     color: ${({ theme }) => theme.primary};
-`;
-
-const BodyFancy = styled.p`
-    font-size: ${bodyText};
-    padding: 0.2rem 0.4rem 0.3rem 0.4rem;
-    font-family: "Shippori Mincho B1", sans-serif;
-    font-weight: 900;
-    word-wrap: normal;
-    cursor: pointer;
-    letter-spacing: 0.1rem;
-    line-height: 1rem;
-    color: ${({ theme }) => theme.primary};
-    &:hover {
-        color: ${({ theme }) => theme.background};
-        background-color: ${({ theme }) => theme.tertiary};
-    }
 `;
 
 const activeClassName = 'nav-item-active'
@@ -123,7 +110,6 @@ export const typography = {
     LargeHeading: LargeHeading,
     LargeHeading1: LargeHeading1,
     Heading: Heading,
-    BodyFancy: BodyFancy,
     Body: Body,
     LinkHeading: LinkHeading,
     LinkHeadingFancy: LinkHeadingFancy,

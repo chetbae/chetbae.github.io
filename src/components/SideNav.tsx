@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { typography } from '../styles';
 
 const LinkContainer = styled.nav`
+    position: fixed;
+    right: 15%;
     width: 20%;
     line-height: 2rem;
     text-align: right;

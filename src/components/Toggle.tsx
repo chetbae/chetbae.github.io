@@ -13,6 +13,23 @@ const StyledButton = styled.button`
     top: 0;
 `;
 
+// toggle 'light  || dark'
+const ToggleText = styled.p`
+    font-size: 0.9rem;
+    padding: 0.2rem 0.4rem 0.3rem 0.4rem;
+    font-family: "Shippori Mincho B1", sans-serif;
+    font-weight: 900;
+    word-wrap: normal;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    line-height: 1rem;
+    color: ${({ theme }) => theme.primary};
+    &:hover {
+        color: ${({ theme }) => theme.background};
+        background-color: ${({ theme }) => theme.tertiary};
+    }
+`;
+
 // type-ing for componenet
 interface IMyProps {
     theme: boolean,
@@ -36,7 +53,7 @@ export const Toggle: React.FC<IMyProps> = (props: IMyProps) => {
 
     return(
         <StyledButton onClick={toggleTheme}>
-            <typography.BodyFancy id="darkMode" >{!theme ? 'dark 🥂' : 'light ☕️'}</typography.BodyFancy>
+            <ToggleText>{!theme ? 'dark 🥂' : 'light ☕️'}</ToggleText>
         </StyledButton>
     )
 }
