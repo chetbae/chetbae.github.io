@@ -13,8 +13,12 @@ const AboutContainer = styled(containers.PageContainer)`
 
 const Column = styled.div`
     background-color: grey;
-    min-width: 25%;
+    width: 25%;
     float: left;
+    word-wrap: normal;
+    text-align: left;
+
+    margin: 0rem;
 `;
 
 const Row = styled.div`
@@ -73,6 +77,7 @@ export const AboutPage = () => {
                 <containers.TopLarge>
                     <Column>
                         Education
+                        asdasdasdas dasdasdasdasda sdsdsdsdssdsd sdsd asdasdasdasd asdasdasda asdasdasd
                     </Column>
                     <Column>
                         Experience

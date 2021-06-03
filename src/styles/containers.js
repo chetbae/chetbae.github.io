@@ -15,8 +15,8 @@ const TopLarge = styled.div`
 
 // in App.tsx
 const SiteContainer = styled.div`
-    width: 100wh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: ${({ theme }) => theme.background}; 
     justify-content: center;
 `;
