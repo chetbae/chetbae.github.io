@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { light_mode, dark_mode } from './styles/colour';
 import { Router, Route, Switch } from 'react-router-dom';
 import history from './history';
-import { LandingPage, AboutPage } from './containers';
+import { LandingPage, AboutPage, MusicPage, ProjectsPage } from './containers';
 import { ThemeProvider } from 'styled-components';
 import { Toggle } from './components/Toggle';
 import { containers } from './styles';
@@ -21,7 +21,9 @@ function App() {
         <Router history={history}>
           <Switch>
             <Route exact path='/' component={LandingPage} />
-            <Route path='/about' component={AboutPage} />
+            <Route path='/kurzgesagt' component={AboutPage} />
+            <Route path='/muusika' component={MusicPage} />
+            <Route path='/projects' component={ProjectsPage} />
           </Switch>
         </Router>
         

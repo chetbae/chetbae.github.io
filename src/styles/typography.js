@@ -79,7 +79,10 @@ const LinkHeading = styled(NavLink).attrs({ activeClassName })`
     }
     &.${activeClassName} {
         color: ${({ theme }) => theme.tertiary};
-      }
+        &:hover {
+            color: ${({ theme }) => theme.quaternary};
+        }
+    }
 `;
 
 const LinkHeadingFancy = styled(NavLink).attrs({ activeClassName })`

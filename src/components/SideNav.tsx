@@ -14,19 +14,19 @@ export const SideNav = () => {
         <LinkContainer>
 
             <typography.LinkHeading
-                exact to="/" >
+                exact to='/' >
                 HELLO
             </typography.LinkHeading><br/>
             <typography.LinkHeading
-                exact to="/about" >
+                exact to='/kurzgesagt' >
                 ABOUT
             </typography.LinkHeading><br/>
             <typography.LinkHeading 
-                exact to="/projects" >
+                exact to='/projects' >
                 PROJECTS
             </typography.LinkHeading><br/>
             <typography.LinkHeading 
-                exact to="/music" >
+                exact to='/muusika' >
                 MUSIC
             </typography.LinkHeading><br/>
     

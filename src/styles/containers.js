@@ -9,14 +9,14 @@ const TopMedium = styled.div`
 `;
 
 const TopLarge = styled.div`
-    padding-top: 10rem;
-    float: none;
+    padding-top: 13rem;
 `;
 
 // in App.tsx
 const SiteContainer = styled.div`
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     background-color: ${({ theme }) => theme.background}; 
     justify-content: center;
 `;
