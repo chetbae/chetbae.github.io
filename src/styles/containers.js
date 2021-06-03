@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
-const Top1 = styled.div`
+const TopSmall = styled.div`
     padding-top: 1rem;
 `;
 
-const Top3 = styled.div`
+const TopMedium = styled.div`
     padding-top: 2.6rem;
+`;
+
+const TopLarge = styled.div`
+    padding-top: 10rem;
 `;
 
 // in App.tsx
@@ -29,20 +33,24 @@ const PageContainer = styled.div`
 // page content, left majority
 const ContentContainer = styled.div`
     width: 80%;
-    flex-direction: row;
     background-color: gree;
 `;
 
-const Overlap = styled.div`
-    position: absolute;
-    z-index: -10;
+const ImageContainer = styled.div`
 `;
 
+// const Overlap = styled.div`
+//     position: absolute;
+//     z-index: -10;
+// `;
+
 export const containers = {
+    TopSmall: TopSmall,
+    TopMedium: TopMedium,
+    TopLarge: TopLarge,
+    SiteContainer: SiteContainer,
     PageContainer: PageContainer,
     ContentContainer: ContentContainer,
-    Top1: Top1,
-    Top3: Top3,
-    Overlap: Overlap,
-    SiteContainer: SiteContainer,
+    ImageContainer: ImageContainer,
+    // Overlap: Overlap,
 };

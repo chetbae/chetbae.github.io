@@ -53,6 +53,14 @@ const Body = styled.p`
     color: ${({ theme }) => theme.primary};
 `;
 
+const SmallBody = styled.p`
+font-size: ${smallText};
+font-family: "Open Sans", sans-serif;
+font-weight: 400;
+letter-spacing: 0.1rem;
+color: ${({ theme }) => theme.primary};
+`;
+
 const activeClassName = 'nav-item-active'
 
 const LinkHeading = styled(NavLink).attrs({ activeClassName })`
@@ -111,6 +119,7 @@ export const typography = {
     LargeHeading1: LargeHeading1,
     Heading: Heading,
     Body: Body,
+    SmallBody: SmallBody,
     LinkHeading: LinkHeading,
     LinkHeadingFancy: LinkHeadingFancy,
     LinkBody: LinkBody,

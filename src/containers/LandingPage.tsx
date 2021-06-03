@@ -44,7 +44,7 @@ export const LandingPage = () => {
                     </typography.LargeHeading1>
 
                     <BodyContainer>
-                        <containers.Top3>
+                        <containers.TopMedium>
                             <typography.Heading>
                                 right now ...
                             </typography.Heading>
@@ -63,9 +63,9 @@ export const LandingPage = () => {
                                     <typography.Body>seeking internships for Fall 2021</typography.Body>
                                 </ListItem> */}
                             </ListContainer>
-                        </containers.Top3>
+                        </containers.TopMedium>
 
-                        <containers.Top1>
+                        <containers.TopSmall>
                             <typography.Heading>
                                 before, i was...
                             </typography.Heading>
@@ -105,7 +105,7 @@ export const LandingPage = () => {
                                     </typography.Body>
                                 </ListItem>
                             </ListContainer>
-                        </containers.Top1>
+                        </containers.TopSmall>
                     </BodyContainer>
 
                 </LandingContainer>

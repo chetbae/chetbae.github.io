@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { typography } from '../styles';
 
 const StyledButton = styled.button`
     background-color: ${({ theme }) => theme.background};
