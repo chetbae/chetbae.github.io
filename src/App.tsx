@@ -8,7 +8,7 @@ import { Toggle } from './components/Toggle';
 import { containers } from './styles';
 
 function App() {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
   const themeMode = theme ? light_mode : dark_mode; 
   const themeProps = {
     theme: theme,

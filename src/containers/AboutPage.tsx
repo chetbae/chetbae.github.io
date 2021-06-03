@@ -11,7 +11,7 @@ const linkedIn = 'https://www.linkedin.com/in/max-zhang-608444176/';
 const gitHub = 'https://github.com/chetbae';
 const instagram = 'https://www.instagram.com/mx.yz/';
 const email = 'mailto: maxzhangvancouver@gmail.com';
-// const resume = '';
+
 const AboutContainer = styled(containers.PageContainer)`
     width: 80%;
     margin: 0% 15% 0% 5%;
