@@ -10,6 +10,7 @@ const TopMedium = styled.div`
 
 const TopLarge = styled.div`
     padding-top: 10rem;
+    float: none;
 `;
 
 // in App.tsx
@@ -32,7 +33,7 @@ const PageContainer = styled.div`
 
 // page content, left majority
 const ContentContainer = styled.div`
-    width: 80%;
+    width: 85%;
     background-color: gree;
 `;
 

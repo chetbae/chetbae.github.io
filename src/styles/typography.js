@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom';
 
-const extraLargeText = '3rem'
-const largeText = '2rem'
-const mediumText = '1rem'
-const bodyText = '0.9rem'
-const smallText = '0.75rem'
+const extraLargeText = '3rem';
+const largeText = '2rem';
+const mediumText = '1rem';
+const bodyText = '0.9rem';
+const smallText = '0.75rem';
+const smallerText = '0.715rem';
 
 // large heading, e.g. 'Hello,'
 const LargeHeading = styled.p`
@@ -54,11 +55,11 @@ const Body = styled.p`
 `;
 
 const SmallBody = styled.p`
-font-size: ${smallText};
-font-family: "Open Sans", sans-serif;
-font-weight: 400;
-letter-spacing: 0.1rem;
-color: ${({ theme }) => theme.primary};
+    font-size: ${smallerText};
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.01rem;
+    color: ${({ theme }) => theme.base};
 `;
 
 const activeClassName = 'nav-item-active'

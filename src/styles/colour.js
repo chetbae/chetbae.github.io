@@ -4,7 +4,8 @@ const lightBlue = '#B3C4FF';
 const cornflowerBlue = 'cornflowerblue';
 const moon = '#eff0cc';
 const white = 'aliceblue';
-// const black = '#000000';
+const black = '#000000';
+// const trueWhite ='white';
 const pink = 'lightsalmon';
 const coral = 'lightcoral';
 
@@ -15,6 +16,7 @@ export const light_mode = {
     tertiary: cornflowerBlue,
     quaternary: coral,
     background: white,
+    base: black,
 }
 export const dark_mode = {
     id: 'dark',
@@ -23,4 +25,5 @@ export const dark_mode = {
     tertiary: white,
     quaternary: pink,
     background: superDarkBlue,
+    base: white,
 }
