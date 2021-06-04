@@ -5,6 +5,7 @@ import { SideNav } from '../components/SideNav';
 import lightPhoto from '../assets/trumpetPhoto.jpg';
 import darkPhoto from '../assets/garibaldiPhoto.jpg';
 import resume from '../assets/resume.pdf';
+import { ReactComponent as Icon } from '../assets/download-icon.svg';
 
 const linkedIn = 'https://www.linkedin.com/in/max-zhang-608444176/';
 const gitHub = 'https://github.com/chetbae';
@@ -41,6 +42,14 @@ const AboutImage = styled.img`
     max-width: 25rem;
     height: auto;
     float: left;
+`;
+
+const StyledIcon = styled(Icon)`
+    width: 1.3rem;
+    fill: ${({ theme }) => theme.primary};
+    position: relative;
+    top: 0.3rem;
+    background-color: re;
 `;
 
 export const AboutPage = () => {
@@ -189,7 +198,7 @@ export const AboutPage = () => {
                     </typography.LinkBody>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <typography.LinkBody href={resume} target='_blank' >
-                        CV
+                        CV<StyledIcon />
                     </typography.LinkBody>
                 </containers.TopMedium>
                 <br /><br /><br /><br />
