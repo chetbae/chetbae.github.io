@@ -1,0 +1,2 @@
+(this["webpackJsonppersonal-site"]=this["webpackJsonppersonal-site"]||[]).push([[0],{10:function(n,t,e){"use strict";e.r(t);var i=e(0),o=e.n(i),c=e(2),s=e.n(c),r=(e(8),function(n){n&&n instanceof Function&&e.e(3).then(e.bind(null,11)).then((function(t){var e=t.getCLS,i=t.getFID,o=t.getFCP,c=t.getLCP,s=t.getTTFB;e(n),i(n),o(n),c(n),s(n)}))}),a=e(3);s.a.render(Object(a.jsx)(o.a.StrictMode,{children:" Hi"}),document.getElementById("root")),r()},8:function(n,t,e){}},[[10,1,2]]]);
+//# sourceMappingURL=main.b8d08d99.chunk.js.map
