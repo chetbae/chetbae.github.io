@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 
 export const ThemeManager = () => {
     const [theme, setTheme] = useState(false);
+    // const theme = false;
+    // function setTheme( mode:any ) {
+
+    // };
 
     const setMode = (mode:boolean) => {
         window.localStorage.setItem('theme', JSON.stringify(mode));
@@ -14,7 +18,7 @@ export const ThemeManager = () => {
 
     useEffect(() => {
         const localStorage = window.localStorage.getItem('theme');
-        localStorage && setTheme(JSON.parse(localStorage));
+        if (localStorage) { setTheme(JSON.parse(localStorage)); };
     }, []);
     
     const themeProp = {

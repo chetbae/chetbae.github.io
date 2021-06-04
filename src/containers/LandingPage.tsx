@@ -30,6 +30,13 @@ export const LandingPage = () => {
     const isDark = themeProp.theme;
     const themeMode = themeProp.theme ? dark_mode : light_mode; 
 
+    // const themeMode = light_mode; 
+    // const isDark = false;
+    // const themeProp = {
+    //     theme: isDark,
+    //     themeToggler: function foo(){},
+    // }
+
     return(
         <ThemeProvider theme={themeMode}>
         <containers.SiteContainer>
@@ -37,7 +44,6 @@ export const LandingPage = () => {
             <containers.ContentContainer>
 
                 <LandingContainer>
-
                     <typography.LargeHeading>
                         { isDark ? 'Howdy!' : 'Hello,' }<br />
                     </typography.LargeHeading>
@@ -115,7 +121,7 @@ export const LandingPage = () => {
             
             </containers.ContentContainer>
             <SideNav />
-            <Toggle {...themeProp} />                            
+            <Toggle {...themeProp} />  
         </containers.PageContainer>
         </containers.SiteContainer>
         </ThemeProvider>
