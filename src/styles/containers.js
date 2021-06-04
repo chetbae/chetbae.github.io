@@ -12,7 +12,7 @@ const TopLarge = styled.div`
     padding-top: 13rem;
 `;
 
-// in App.tsx
+// whole background
 const SiteContainer = styled.div`
     width: 100%;
     height: 100%;
@@ -21,7 +21,7 @@ const SiteContainer = styled.div`
     justify-content: center;
 `;
 
-// content + sidenav
+// content + sidenav 
 const PageContainer = styled.div`
     width: 70%;
     padding-top: 7rem;

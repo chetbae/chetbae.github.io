@@ -1,8 +1,8 @@
-import { typography, containers } from '../styles';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { typography, containers, light_mode, dark_mode } from '../styles';
+import { ThemeManager } from '../functions/themeManager';
 import { SideNav } from '../components/SideNav';
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import { Toggle } from '../components/Toggle';
 
 const LandingContainer = styled.div`
     transition: all 0.5s ease;
@@ -26,21 +26,24 @@ const ListItem = styled.li`
 `;
 
 export const LandingPage = () => {
-    const themeContext = useContext(ThemeContext);
-    const mode = themeContext.id === 'dark';
+    const themeProp = ThemeManager();
+    const isDark = themeProp.theme;
+    const themeMode = themeProp.theme ? dark_mode : light_mode; 
 
     return(
+        <ThemeProvider theme={themeMode}>
+        <containers.SiteContainer>
         <containers.PageContainer>
             <containers.ContentContainer>
 
                 <LandingContainer>
 
                     <typography.LargeHeading>
-                        { mode ? 'Howdy!' : 'Hello,'}<br />
+                        { isDark ? 'Howdy!' : 'Hello,' }<br />
                     </typography.LargeHeading>
                     <typography.LargeHeading1>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        I'm Max{mode ? ' 🤠' : ''}.
+                        I'm Max{ isDark ? ' 🤠' : '' }.
                     </typography.LargeHeading1>
 
                     <BodyContainer>
@@ -112,7 +115,9 @@ export const LandingPage = () => {
             
             </containers.ContentContainer>
             <SideNav />
-
+            <Toggle {...themeProp} />                            
         </containers.PageContainer>
+        </containers.SiteContainer>
+        </ThemeProvider>
     )
 }

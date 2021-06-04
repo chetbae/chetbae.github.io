@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import { typography, containers, light_mode, dark_mode } from '../styles';
+import { ThemeManager } from '../functions/themeManager';
 import { SideNav } from '../components/SideNav';
-import { typography, containers } from '../styles';
+import { Toggle } from '../components/Toggle';
 import lightPhoto from '../assets/trumpetPhoto.jpg';
 import darkPhoto from '../assets/garibaldiPhoto.jpg';
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
 import resume from '../assets/resume.pdf';
 
 const linkedIn = 'https://www.linkedin.com/in/max-zhang-608444176/';
@@ -45,14 +45,17 @@ const AboutImage = styled.img`
 `;
 
 export const AboutPage = () => {
-    const themeContext = useContext(ThemeContext);
-    const mode = themeContext.id === 'dark';
+    const themeProp = ThemeManager();
+    const isDark = themeProp.theme;
+    const themeMode = themeProp.theme ? dark_mode : light_mode; 
 
     return(
+        <ThemeProvider theme={themeMode} >
+        <containers.SiteContainer>
         <AboutContainer>
             <containers.ContentContainer>
                 <Row>
-                    <AboutImage src={mode ? darkPhoto : lightPhoto}/>
+                    <AboutImage src={ isDark ? darkPhoto : lightPhoto}/>
                     <Body>
                         <AboutHeading>
                             Hey, here's a bit about myself. <br />
@@ -194,9 +197,11 @@ export const AboutPage = () => {
                 </containers.TopMedium>
                 <br /><br /><br /><br />
             </containers.ContentContainer>
-
             <SideNav/>
+            <Toggle {...themeProp} />
         </AboutContainer>
+        </containers.SiteContainer>
+        </ThemeProvider>
     )
 }
 
