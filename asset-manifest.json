@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/static/js/main.b6dedbc8.chunk.js",
-    "main.js.map": "/static/js/main.b6dedbc8.chunk.js.map",
+    "main.js": "/static/js/main.17c609b1.chunk.js",
+    "main.js.map": "/static/js/main.17c609b1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.abe03d85.js",
     "runtime-main.js.map": "/static/js/runtime-main.abe03d85.js.map",
     "static/js/2.33819495.chunk.js": "/static/js/2.33819495.chunk.js",
@@ -12,6 +12,7 @@
     "index.html": "/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
     "static/js/2.33819495.chunk.js.LICENSE.txt": "/static/js/2.33819495.chunk.js.LICENSE.txt",
+    "static/media/download-icon.7d13bcc2.svg": "/static/media/download-icon.7d13bcc2.svg",
     "static/media/garibaldiPhoto.132ce852.jpg": "/static/media/garibaldiPhoto.132ce852.jpg",
     "static/media/resume.7c0ab280.pdf": "/static/media/resume.7c0ab280.pdf",
     "static/media/trumpetPhoto.58de30af.jpg": "/static/media/trumpetPhoto.58de30af.jpg"
@@ -20,6 +21,6 @@
     "static/js/runtime-main.abe03d85.js",
     "static/js/2.33819495.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.b6dedbc8.chunk.js"
+    "static/js/main.17c609b1.chunk.js"
   ]
 }
