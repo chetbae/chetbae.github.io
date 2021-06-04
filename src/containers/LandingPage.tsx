@@ -1,8 +1,7 @@
-import styled, { ThemeProvider } from 'styled-components';
-import { typography, containers, light_mode, dark_mode } from '../styles';
-import { ThemeManager } from '../functions/themeManager';
+import { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
+import { typography, containers } from '../styles';
 import { SideNav } from '../components/SideNav';
-import { Toggle } from '../components/Toggle';
 
 const LandingContainer = styled.div`
     transition: all 0.5s ease;
@@ -26,19 +25,10 @@ const ListItem = styled.li`
 `;
 
 export const LandingPage = () => {
-    const themeProp = ThemeManager();
-    const isDark = themeProp.theme;
-    const themeMode = themeProp.theme ? dark_mode : light_mode; 
-
-    // const themeMode = light_mode; 
-    // const isDark = false;
-    // const themeProp = {
-    //     theme: isDark,
-    //     themeToggler: function foo(){},
-    // }
+    const themeContext = useContext(ThemeContext);
+    const isDark = themeContext.id === 'dark';
 
     return(
-        <ThemeProvider theme={themeMode}>
         <containers.SiteContainer>
         <containers.PageContainer>
             <containers.ContentContainer>
@@ -121,9 +111,7 @@ export const LandingPage = () => {
             
             </containers.ContentContainer>
             <SideNav />
-            <Toggle {...themeProp} />  
         </containers.PageContainer>
         </containers.SiteContainer>
-        </ThemeProvider>
     )
 }

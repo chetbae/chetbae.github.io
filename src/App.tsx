@@ -1,12 +1,18 @@
-import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { Router, Route, Switch } from 'react-router-dom';
 import history from './history';
 import { LandingPage, AboutPage, MusicPage, ProjectsPage } from './containers';
+import { ThemeManager } from './functions/themeManager';
+import { light_mode, dark_mode } from './styles';
+import { Toggle } from './components/Toggle';
 
 
 function App() {
+  const themeProp = ThemeManager();
+  const themeMode = themeProp.theme ? dark_mode : light_mode; 
 
   return (
+    <ThemeProvider theme={themeMode} >
     <Router history={history}>
       <Switch>
         <Route exact path='/' component={LandingPage} />
@@ -15,7 +21,9 @@ function App() {
         <Route path='/projects' component={ProjectsPage} />
       </Switch>
     </Router>
-  );
+    <Toggle {...themeProp} />
+    </ThemeProvider>
+    );
 }
 
 export default App;

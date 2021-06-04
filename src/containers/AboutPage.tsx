@@ -1,8 +1,7 @@
-import styled, { ThemeProvider } from 'styled-components';
-import { typography, containers, light_mode, dark_mode } from '../styles';
-import { ThemeManager } from '../functions/themeManager';
+import { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
+import { typography, containers } from '../styles';
 import { SideNav } from '../components/SideNav';
-import { Toggle } from '../components/Toggle';
 import lightPhoto from '../assets/trumpetPhoto.jpg';
 import darkPhoto from '../assets/garibaldiPhoto.jpg';
 import resume from '../assets/resume.pdf';
@@ -45,12 +44,10 @@ const AboutImage = styled.img`
 `;
 
 export const AboutPage = () => {
-    const themeProp = ThemeManager();
-    const isDark = themeProp.theme;
-    const themeMode = themeProp.theme ? dark_mode : light_mode; 
+    const themeContext = useContext(ThemeContext);
+    const isDark = themeContext.id === 'dark';
 
     return(
-        <ThemeProvider theme={themeMode} >
         <containers.SiteContainer>
         <AboutContainer>
             <containers.ContentContainer>
@@ -198,10 +195,8 @@ export const AboutPage = () => {
                 <br /><br /><br /><br />
             </containers.ContentContainer>
             <SideNav/>
-            <Toggle {...themeProp} />
         </AboutContainer>
         </containers.SiteContainer>
-        </ThemeProvider>
     )
 }
 
