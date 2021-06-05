@@ -19,13 +19,13 @@ const ListItem = styled.li`
 
     &::marker{
         content: '●     ';
-        color: ${({ theme }) => theme.primary};
+        color: ${( props:any ) => props.theme.primary};
         font-size: 0.8rem;
     }
 `;
 
 export const LandingPage = () => {
-    const themeContext = useContext(ThemeContext);
+    const themeContext:any = useContext(ThemeContext);
     const isDark = themeContext.id === 'dark';
 
     return(

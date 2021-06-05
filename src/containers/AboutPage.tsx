@@ -33,7 +33,7 @@ const Body = styled.div`
 `;
 
 const AboutHeading = styled(typography.Body)`
-    color: ${({ theme }) => theme.base};
+    color: ${( props:any ) => props.theme.base};
     letter-spacing: 0rem;
 `;
 
@@ -46,14 +46,14 @@ const AboutImage = styled.img`
 
 const StyledIcon = styled(Icon)`
     width: 1.3rem;
-    fill: ${({ theme }) => theme.primary};
+    fill: ${( props:any ) => props.theme.primary};
     position: relative;
     top: 0.3rem;
     background-color: re;
 `;
 
 export const AboutPage = () => {
-    const themeContext = useContext(ThemeContext);
+    const themeContext:any = useContext(ThemeContext);
     const isDark = themeContext.id === 'dark';
 
     return(
