@@ -4,7 +4,7 @@ import { typography, containers } from '../styles';
 import { SideNav } from '../components/SideNav';
 
 export const MusicPage = () => {
-    const themeContext = useContext(ThemeContext);
+    const themeContext:any = useContext(ThemeContext);
     const isDark = themeContext.id === 'dark';
     
     return(

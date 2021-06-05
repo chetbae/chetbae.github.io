@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledButton = styled.button`
     background: none;
     border: none;
-    color: ${({ theme }) => theme.secondary};
+    color: ${( props:any ) => props.theme.secondary};
     position: fixed;
     right: 1%;
     top: 0.5%;
@@ -18,10 +18,10 @@ const ToggleText = styled.p`
     font-weight: 900;
     cursor: pointer;
     letter-spacing: 0.1rem;
-    color: ${({ theme }) => theme.primary};
+    color: ${( props:any ) => props.theme.primary};
     &:hover {
-        color: ${({ theme }) => theme.background};
-        background-color: ${({ theme }) => theme.tertiary};
+        color: ${( props:any ) => props.theme.background};
+        background-color: ${( props:any ) => props.theme.tertiary};
     }
 `;
 
