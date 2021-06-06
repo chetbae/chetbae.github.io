@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { typography, containers } from '../styles';
+import { typography, containers, device } from '../styles';
 import { SideNav } from '../components/SideNav';
 import lightPhoto from '../assets/trumpetPhoto.jpg';
 import darkPhoto from '../assets/garibaldiPhoto.jpg';
@@ -13,23 +13,40 @@ const instagram = 'https://www.instagram.com/mx.yz/';
 const email = 'mailto: maxzhangvancouver@gmail.com';
 
 const AboutContainer = styled(containers.PageContainer)`
-    width: 80%;
-    margin: 0% 15% 0% 5%;
+    @media ${device.tablet} {
+        width: 80%;
+        margin: 0% 15% 0% 5%;
+    }
 `;
 
 const Column = styled.div`
-    width: 16%;
+    width: 50%;
     padding-right: 9%;
     float: left;
     background-color: gree;
+
+    @media ${device.tablet} {
+        width: 16%;
+    }
 `;
 
 const Row = styled.div`
-    background-color: re;
+    display: flex;
+    flex-direction: column;
+
+    @media ${device.tablet} {
+        display: inline;
+    }
 `;
 
 const Body = styled.div`
-    padding-left: 50%;
+    @media ${device.tablet} {
+        padding-left: 50%;
+    }
+    @media ${device.desktop} {
+        padding-left: 30%;
+        width: 50%;
+    }
 `;
 
 const AboutHeading = styled(typography.Body)`
@@ -38,10 +55,14 @@ const AboutHeading = styled(typography.Body)`
 `;
 
 const AboutImage = styled.img`
-    width: 45%;
-    max-width: 25rem;
+    width: 100%;
     height: auto;
     float: left;
+
+    @media ${device.tablet} {
+        width: 45%;
+        max-width: 25rem;
+    }
 `;
 
 const StyledIcon = styled(Icon)`
@@ -57,8 +78,8 @@ export const AboutPage = () => {
     const isDark = themeContext.id === 'dark';
 
     return(
-        <containers.SiteContainer>
         <AboutContainer>
+            <SideNav/>
             <containers.ContentContainer>
                 <Row>
                     <AboutImage src={ isDark ? darkPhoto : lightPhoto}/>
@@ -180,32 +201,26 @@ export const AboutPage = () => {
                 </containers.TopLarge>
 
                 <br/>
-                <containers.TopMedium>
+                <Row>
                     <typography.LinkBody href={email} target='_blank' >
                         email
                     </typography.LinkBody>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <typography.LinkBody href={gitHub} target='_blank' >
                         GitHub
                     </typography.LinkBody>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <typography.LinkBody href={instagram} target='_blank' >
                         Instagram
                     </typography.LinkBody>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <typography.LinkBody href={linkedIn} target='_blank' >
                         LinkedIn
                     </typography.LinkBody>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <typography.LinkBody href={resume} target='_blank' >
                         CV<StyledIcon />
                     </typography.LinkBody>
-                </containers.TopMedium>
+                </Row>
                 <br /><br /><br /><br />
             </containers.ContentContainer>
-            <SideNav/>
         </AboutContainer>
-        </containers.SiteContainer>
     )
 }
 

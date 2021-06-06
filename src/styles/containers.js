@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../styles/device';
 
 const TopSmall = styled.div`
     padding-top: 1rem;
@@ -9,7 +10,11 @@ const TopMedium = styled.div`
 `;
 
 const TopLarge = styled.div`
-    padding-top: 13rem;
+    padding-top: 5rem;
+
+    @media ${device.tablet} {
+        padding-top: 13rem;
+    }
 `;
 
 // whole background
@@ -17,33 +22,41 @@ const SiteContainer = styled.div`
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background-color: ${({ theme }) => theme.background}; 
-    justify-content: center;
+    background-color: ${( props ) => props.theme.background}; 
+    display: flex;
+    flex-direction: column;
+
+    @media ${device.tablet} {
+    }
 `;
 
 // content + sidenav 
 const PageContainer = styled.div`
-    width: 70%;
-    padding-top: 7rem;
+    margin: 0% 5%;
     display: flex;
-    flex-direction: row;
-    margin: 0% 15%;
-    background-color: re;
+    flex-direction: column;
+
+    @media ${device.tablet} {
+        padding-top: 7rem;
+        width: 70%;
+        margin: 0% 15%;
+        flex-direction: row;
+    }
 `;
 
 // page content, left majority
 const ContentContainer = styled.div`
-    width: 85%;
+    padding-top: 2rem;
     background-color: gree;
+
+    @media ${device.tablet} {
+        padding-top: 0;
+        width: 85%;
+    }
 `;
 
 const ImageContainer = styled.div`
 `;
-
-// const Overlap = styled.div`
-//     position: absolute;
-//     z-index: -10;
-// `;
 
 export const containers = {
     TopSmall: TopSmall,

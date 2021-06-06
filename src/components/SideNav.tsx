@@ -1,12 +1,24 @@
 import styled from 'styled-components';
-import { typography } from '../styles';
+import { typography, device } from '../styles';
 
 const LinkContainer = styled.nav`
-    position: fixed;
-    right: 15%;
-    width: 20%;
-    line-height: 2rem;
-    text-align: right;
+    background-color: ${( props:any ) => props.theme.background};
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 1.2rem 0 0.8rem 0;
+    
+    @media ${device.tablet} {
+        background-color: transparent;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 7rem;
+        right: 15%;
+        width: 20%;
+        line-height: 1rem;
+    }
 `;
 
 export const SideNav = () => {

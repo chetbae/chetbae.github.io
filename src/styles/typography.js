@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom';
+import { device } from '../styles/device';
 
 const extraLargeText = '3rem';
 const largeText = '2rem';
@@ -35,7 +36,7 @@ const LargeHeading1 = styled.p`
 // 'right now...', 'before, i was...'
 const Heading = styled.p`
     margin: 1rem 0rem 1.4rem 0rem;
-    font-size: ${smallText};
+    font-size: ${mediumText};
     padding-bottom: 0.1rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -43,6 +44,10 @@ const Heading = styled.p`
     letter-spacing: 0.6rem;
     line-height: 14px;
     color: ${({ theme }) => theme.primary};
+
+    @media ${device.tablet} {
+        font-size: ${smallText};
+    }
 `;
 
 // list items, ...
@@ -65,7 +70,7 @@ const SmallBody = styled.p`
 const activeClassName = 'nav-item-active'
 
 const LinkHeading = styled(NavLink).attrs({ activeClassName })`
-    font-size: ${mediumText};
+    font-size: ${smallText};
     font-family: "Open Sans", sans-serif;
     color: ${({ theme }) => theme.secondary};
     text-align: right;
@@ -74,14 +79,27 @@ const LinkHeading = styled(NavLink).attrs({ activeClassName })`
     text-decoration: none;
     line-height: 1rem;
     font-weight: 700;
+    margin: 0 3%;
+    border-bottom: 0.18rem solid ${({ theme }) => theme.primary};
+
     &:hover {
         color: ${({ theme }) => theme.quaternary};
     }
+
     &.${activeClassName} {
         color: ${({ theme }) => theme.tertiary};
         &:hover {
             color: ${({ theme }) => theme.quaternary};
         }
+    }
+
+    @media ${device.mobileM} {
+        font-size: ${mediumText};
+        margin: none;
+    }
+
+    @media ${device.tablet} {
+        border-bottom: none;
     }
 `;
 
@@ -107,14 +125,20 @@ const LinkBody = styled.a`
     font-size: ${bodyText};
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
-    word-wrap: normal;
     color: ${({ theme }) => theme.primary};
     border-bottom: 0.2rem solid ${({ theme }) => theme.tertiary};
     cursor: pointer;
     text-decoration: none;
     letter-spacing: 0.12rem;
+    margin-top: 1rem;
+
     &:hover {
         border-bottom: 0.2rem solid ${({ theme }) => theme.quaternary};
+    }
+
+    @media ${device.tablet} {
+        margin-right: 5%;
+        
     }
 `;
 

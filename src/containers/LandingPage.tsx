@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled, { ThemeContext } from 'styled-components';
-import { typography, containers } from '../styles';
+import { typography, containers, device } from '../styles';
 import { SideNav } from '../components/SideNav';
 
 const LandingContainer = styled.div`
@@ -8,14 +8,21 @@ const LandingContainer = styled.div`
 `;
 
 const BodyContainer = styled.div`
-    margin-left: 1.4rem;
+    margin-left: 0.2rem;
+
+    @media ${device.tablet} {
+        margin-left: 1.4rem;
+    }
 `;
 
 const ListContainer = styled.ul`
-    margin-left: 2.5rem;
+    @media ${device.tablet} {
+        margin-left: 2.5rem;
+    }
 `;
 
 const ListItem = styled.li`
+    line-height: 1.5rem;
 
     &::marker{
         content: '●     ';
@@ -24,23 +31,28 @@ const ListItem = styled.li`
     }
 `;
 
+const ImMax = styled(typography.LargeHeading1)`
+    @media ${device.mobileL} {
+        padding-left: 5rem;
+    }
+`;
+
 export const LandingPage = () => {
     const themeContext:any = useContext(ThemeContext);
     const isDark = themeContext.id === 'dark';
 
     return(
-        <containers.SiteContainer>
         <containers.PageContainer>
+            <SideNav />     
             <containers.ContentContainer>
 
                 <LandingContainer>
                     <typography.LargeHeading>
                         { isDark ? 'Howdy!' : 'Hello,' }<br />
                     </typography.LargeHeading>
-                    <typography.LargeHeading1>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <ImMax>
                         I'm Max{ isDark ? ' 🤠' : '' }.
-                    </typography.LargeHeading1>
+                    </ImMax>
 
                     <BodyContainer>
                         <containers.TopMedium>
@@ -58,10 +70,8 @@ export const LandingPage = () => {
                                         </typography.LinkBody>
                                     </typography.Body>
                                 </ListItem>
-                                {/* <ListItem>
-                                    <typography.Body>seeking internships for Fall 2021</typography.Body>
-                                </ListItem> */}
                             </ListContainer>
+
                         </containers.TopMedium>
 
                         <containers.TopSmall>
@@ -110,8 +120,6 @@ export const LandingPage = () => {
                 </LandingContainer>
             
             </containers.ContentContainer>
-            <SideNav />
         </containers.PageContainer>
-        </containers.SiteContainer>
     )
 }

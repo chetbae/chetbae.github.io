@@ -3,7 +3,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import history from './history';
 import { LandingPage, AboutPage, MusicPage, ProjectsPage } from './containers';
 import { ThemeManager } from './functions/themeManager';
-import { light_mode, dark_mode } from './styles';
+import { containers, light_mode, dark_mode } from './styles';
 import { Toggle } from './components/Toggle';
 
 
@@ -13,15 +13,17 @@ function App() {
 
   return (
     <ThemeProvider theme={themeMode} >
-    <Router history={history}>
-      <Switch>
-        <Route exact path='/' component={LandingPage} />
-        <Route path='/kurzgesagt' component={AboutPage} />
-        <Route path='/muusika' component={MusicPage} />
-        <Route path='/projects' component={ProjectsPage} />
-      </Switch>
-    </Router>
-    <Toggle {...themeProp} />
+      <containers.SiteContainer>
+      <Toggle {...themeProp} />
+      <Router history={history}>
+        <Switch>
+          <Route exact path='/' component={LandingPage} />
+          <Route path='/kurzgesagt' component={AboutPage} />
+          <Route path='/muusika' component={MusicPage} />
+          <Route path='/projects' component={ProjectsPage} />
+        </Switch>
+      </Router>
+      </containers.SiteContainer>
     </ThemeProvider>
     );
 }
